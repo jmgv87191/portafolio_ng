@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { CommonModule } from '@angular/common';
@@ -28,4 +28,9 @@ import { CustomSidenavComponent } from './components/custom-sidenav/custom-siden
 })
 export class AppComponent {
   title = 'portafolio_ng';
+
+  collapsed = signal(false);
+
+  sidenavWidth = computed(()=> this.collapsed()? '65px': '250px')
+
 }
