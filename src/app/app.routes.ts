@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { PortafolioComponent } from './components/portafolio/portafolio.component';
+import { AboutComponent } from './components/about/about.component';
 
 export const routes: Routes = [
     {
-        path:'',
+        path:'home',
         component: HomeComponent
     },
     {
@@ -13,10 +14,10 @@ export const routes: Routes = [
     },
     {
         path:'about',
-        component:PortafolioComponent 
+        component:AboutComponent 
     },
     {
-        path:'**', pathMatch:'full',redirectTo:''
-    },
+        path:'**',pathMatch:'full', redirectTo:'home'
+    }
 
 ];

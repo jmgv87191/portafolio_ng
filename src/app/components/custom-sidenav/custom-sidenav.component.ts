@@ -29,12 +29,17 @@ export class CustomSidenavComponent {
     {
       icon: 'analytics',
       label: 'Home',
-      route: ''
+      route: '/home'
     },
     {
       icon: 'comments',
       label: 'Sobre mi',
       route: '/about'
+    },
+    {
+      icon: 'comments',
+      label: 'Portafolio',
+      route: '/portafolio'
     },
   ]);
 
