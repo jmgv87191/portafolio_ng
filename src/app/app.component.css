@@ -10,3 +10,16 @@ mat-toolbar{
 mat-sidenav-container{
     height: calc(100vh - 64px) ;
 }
+
+@media (max-width:780px) {
+    
+    mat-sidenav{
+        width: 64px !important;
+
+    }
+    mat-sidenav-content{
+        margin-left: 65px !important;
+    }
+
+
+}
