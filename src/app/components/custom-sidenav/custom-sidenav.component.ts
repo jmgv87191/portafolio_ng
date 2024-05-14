@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { RouterModule } from '@angular/router';
 
+
 @Component({
   selector: 'app-custom-sidenav',
   standalone: true,
@@ -13,7 +14,8 @@ import { RouterModule } from '@angular/router';
     MatIconModule,
     CommonModule,
     RouterLink,
-    RouterModule
+    RouterModule,
+    
   ],
   templateUrl: './custom-sidenav.component.html',
   styleUrl: './custom-sidenav.component.css'
@@ -27,19 +29,24 @@ export class CustomSidenavComponent {
 
   menuItems = signal<MenuItem[]>([
     {
-      icon: 'analytics',
+      icon: 'home',
       label: 'Home',
       route: '/home'
     },
     {
-      icon: 'comments',
+      icon: 'account_box',
       label: 'Sobre mi',
       route: '/about'
     },
     {
-      icon: 'comments',
+      icon: 'work',
       label: 'Portafolio',
       route: '/portafolio'
+    },
+    {
+      icon: 'mail',
+      label: 'Contacto',
+      route: '/contacto'
     },
   ]);
 
