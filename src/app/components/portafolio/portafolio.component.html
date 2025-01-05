@@ -1,0 +1,47 @@
+
+<div class="cont_portafolio">
+    <div class="encabezado">Angular</div>
+
+        @for (item of proyectos; track $index) {
+    
+            <a [href]="item.link" target="_blank">
+                <div class="proyecto">
+                    <div class="titulo">
+                        {{ item.title }}
+                    </div>
+                    <div class="cont_imagen">
+                        <img [src]=" item.img " alt="">
+                    </div>
+                    <div class="texto">
+                        <p> {{ item.text_title }} </p>
+                        <p [innerHTML]="item.text"></p>
+                    </div>
+                </div>
+            </a>        
+        }
+
+</div>
+
+<div class="cont_portafolio">
+    <div class="encabezado my-5">HTML, CSS, JavaScript</div>
+
+        @for (item of proyectos_html; track $index) {
+    
+            <a [href]="item.link" target="_blank">
+                <div class="proyecto">
+                    <div class="titulo">
+                        {{ item.title }}
+                    </div>
+                    <div class="cont_imagen">
+                        <img [src]=" item.img " alt="">
+                    </div>
+                    <div class="texto">
+                        <p> {{ item.text_title }} </p>
+                        <p [innerHTML]="item.text"></p>
+                    </div>
+                </div>
+            </a>        
+        }
+
+</div>
+

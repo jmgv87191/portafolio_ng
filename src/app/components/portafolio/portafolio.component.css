@@ -1,0 +1,113 @@
+.cont_portafolio{
+    width: 100%;
+    min-height: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.proyecto{
+    position: relative;
+    width: 15rem;
+    border: 1px solid black;
+    height: 27rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgb(255, 249, 241);
+}
+
+.proyecto:hover .titulo {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 2px solid black;
+}
+
+.proyecto:hover .cont_imagen img {
+
+    transform: scale(1.5) 
+}
+
+.titulo{
+    width: 80%;
+    height: 10%;
+    border: 1px solid black;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgb(83, 83, 83);
+    color: white;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+}
+
+.cont_imagen{
+    width: 80%;
+    height: auto;
+    border: 5px solid rgb(242, 242, 242);
+    margin-top: 20px;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+
+
+}
+
+.cont_imagen img {
+    width: 100%;
+    height: auto; 
+    display: block;
+    transition: transform 0.3s ease; 
+
+}
+
+.texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: white; /* Color del texto */
+    padding: 10px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.proyecto:hover .texto {
+    transform: translateY(0); 
+}
+
+.highlight {
+    color: rgb(215, 7, 7);
+    font-weight: bold;
+}
+
+@media (max-width:1350px) {
+    .proyecto{
+        width: 20rem;
+    }
+}
+
+
+.encabezado{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}

@@ -1,0 +1,49 @@
+<div class="titulo">
+    <h1>Enviar email</h1>
+</div>
+
+<div class="container mt-4" >
+
+    <form class="cont_form" action="" [formGroup]="form" (ngSubmit)="sendMail()" >
+    
+        <div class="row" style="width: 100% ;">
+            
+            <div class="form-group col-lg-4 col-md-6 col-sm-12 ">
+                <label for="exampleFormControlInput1">De:</label>
+                <input formControlName="de" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <span *ngIf="form.get('de')?.hasError('required') && form.get('de')?.touched ">Favor de ingresar el remitente</span>
+            </div>
+    
+            <div class="form-group col-lg-4 col-md-6 col-sm-12 ">
+                <label for="exampleFormControlInput1">Para:</label>
+                <input formControlName="para" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <span *ngIf="form.get('para')?.hasError('required') && form.get('para')?.touched ">Favor de ingresar el nombre del destinatario</span>
+
+            </div>
+    
+            <div class="form-group col-lg-4 col-md-12 col-sm-12 ">
+                <label for="exampleFormControlInput1">Asunto:</label>
+                <input formControlName="sobre" type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                <span *ngIf="form.get('sobre')?.hasError('required') && form.get('sobre')?.touched ">Favor de ingresar el asunto de su correo</span>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Example textarea</label>
+                <textarea formControlName="mensaje" class="form-control " id="exampleFormControlTextarea1" rows="3"></textarea>
+                <span *ngIf="form.get('mensaje')?.hasError('required') && form.get('mensaje')?.touched ">Favor de ingresar el mensaje</span>
+
+            </div>
+
+        </div>
+        <div class="cont_btn" >
+            <button [disabled]="form.invalid" class="btn btn-info" style="width: 200px;" >Enviar</button>
+        </div>
+
+    </form>
+</div>
+
+
