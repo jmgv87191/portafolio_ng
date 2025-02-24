@@ -12,7 +12,7 @@ import { Proyectos } from '../../interfaces/proyecto';
 })
 export class VerMasComponent implements OnInit {
 
-  proyecto: Proyectos = {id:0,title:'',img:'',text_title:'',text:'',tools:''}
+  proyecto: Proyectos = {id:0,title:'',img:'',text_title:'',text:'',tools:[]}
 
   constructor( private data: DataService,
     private aRoute:ActivatedRoute

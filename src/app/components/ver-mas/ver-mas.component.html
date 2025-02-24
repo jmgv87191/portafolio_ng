@@ -1,1 +1,16 @@
-<h1> {{ proyecto.id }} </h1>
+<h1> {{ proyecto.title }} </h1>
+<h3> {{ proyecto.text_title }} </h3>
+
+<p>
+
+</p>
+
+<h2>Herramientas</h2>
+<ul class="list-group" >
+
+    @for (item of proyecto.tools ; track $index) {
+
+        <li class="list-group-item" > {{ item }} </li>    
+    }
+
+</ul>

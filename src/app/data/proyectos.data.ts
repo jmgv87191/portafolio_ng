@@ -9,7 +9,7 @@ export const proyectos: Proyectos[] = [
         img: '../../../assets/pc.jpg',
         text_title: "Proyecto de facturas en Angular",
         text: "asdasdasdasdasd",
-        tools: "Angular, Api,"
+        tools: ["Angular","Api","BootsWatch"] 
     },
     {
         id:2,
@@ -18,6 +18,6 @@ export const proyectos: Proyectos[] = [
         text_title: 'Hecho en Angular',
         text:`Esta hecho en angular sin utilizar una base de datos, toda la informacion se consulta
         de una base simulada en typescript y se utiliza session storage para guardar los cambios realizados`,
-        tools: "Angular, Api,"
+        tools: ["Angular","Api"] 
     },
 ]

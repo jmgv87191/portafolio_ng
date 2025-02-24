@@ -13,5 +13,5 @@ export interface Proyectos {
     img: string;
     text_title:string;
     text:string;
-    tools: string;
+    tools: string[];
 }
