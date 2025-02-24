@@ -4,20 +4,31 @@
 
         @for (item of proyectos; track $index) {
     
-            <a [href]="item.link" target="_blank">
-                <div class="proyecto">
-                    <div class="titulo">
-                        {{ item.title }}
+            <div class="card">
+                <a [href]="item.link" target="_blank">
+                    <div class="proyecto">
+                        <div class="titulo">
+                            {{ item.title }}
+                        </div>
+                        <div class="cont_imagen">
+                            <img [src]=" item.img " alt="">
+                        </div>
+                        <div class="texto">
+                            <p> {{ item.text_title }} </p>
+                            <p [innerHTML]="item.text"></p>
+                        </div>
                     </div>
-                    <div class="cont_imagen">
-                        <img [src]=" item.img " alt="">
+                    
+                    
+                </a>
+                <section>
+                    <div class="example-button-row">
+                        <button class="proyect_button" routerLink="/verMas/{{item.id}}"  mat-raised-button> Ver mas</button>
                     </div>
-                    <div class="texto">
-                        <p> {{ item.text_title }} </p>
-                        <p [innerHTML]="item.text"></p>
-                    </div>
-                </div>
-            </a>        
+                </section>
+                
+            </div>
+
         }
 
 </div>
@@ -40,7 +51,9 @@
                         <p [innerHTML]="item.text"></p>
                     </div>
                 </div>
-            </a>        
+            </a>      
+            
+
         }
 
 </div>

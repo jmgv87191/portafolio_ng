@@ -111,3 +111,8 @@ a{
     font-size: 30px;
     font-weight: bolder;
 }
+
+.proyect_button{
+    background-color: red;
+    width: 100%;
+}

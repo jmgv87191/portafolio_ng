@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { Proyecto } from '../../interfaces/proyecto';
 import {  RouterLink } from '@angular/router';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-portafolio',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, MatButtonModule, MatDividerModule, MatIconModule],
   templateUrl: './portafolio.component.html',
   styleUrl: './portafolio.component.css'
 })
@@ -14,15 +17,16 @@ export class PortafolioComponent {
   proyectos: Proyecto [] = [
 
     {
+      id:1,
       title: 'Ejemplo facturas',
       img: '../../../assets/pc.jpg',
       text_title: 'Proyecto de facturas en Angular',
       text:`Ejercicio realizado en angular consiste en una lista de productos en la que puedes
       agregar(nombre, precio y cantidad) o eliminar y muestra un desplegado del total`,
       link: '../../../assets/fact/index.html'
-
     },
     {
+      id:2,
       title: 'Carrito de compras',
       img: '../../../assets/carrito-de-compras.png',
       text_title: 'Hecho en Angular',
@@ -32,6 +36,7 @@ export class PortafolioComponent {
 
     },
     {
+      id:3,
       title: 'Agregar usuarios',
       img: '../../../assets/agregar-usuario.png',
       text_title: 'Interfaz para administrar usuarios',
@@ -40,6 +45,7 @@ export class PortafolioComponent {
 
     },
     {
+      id:4,
       title: 'App Paises',
       img: '../../../assets/bandera.png',
       text_title: 'App para buscar y ver datos de los paises del mundo',
@@ -48,6 +54,7 @@ export class PortafolioComponent {
 
     },
     {
+      id:5,
       title: 'Pipes App',
       img: '../../../assets/bandera.png',
       text_title: 'Practica implementando los pipes disponibles en Angular',
@@ -59,6 +66,7 @@ export class PortafolioComponent {
 
   proyectos_html: Proyecto [] = [
     {
+      id:6,
       title: '100 días CSS',
       img: '../../../assets/100dias.png',
       text_title: 'Reto de los 100 días de CSS!!!',
@@ -66,6 +74,7 @@ export class PortafolioComponent {
       link: '../../../assets/100_dias_css/index.html'
     },
     {
+      id:7,
       title: 'Cursos CSS',
       img: '../../../assets/css.jpg',
       text_title: 'Proyecto de facturas en Angular',
@@ -74,6 +83,7 @@ export class PortafolioComponent {
 
     },
     {
+      id:8,
       title: 'Cafeteria',
       img: '../../../assets/cafe.jpg',
       text_title: 'Hecho en Angular',
