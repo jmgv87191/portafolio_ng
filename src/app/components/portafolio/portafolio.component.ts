@@ -55,11 +55,11 @@ export class PortafolioComponent {
     },
     {
       id:5,
-      title: 'Pipes App',
-      img: '../../../assets/bandera.png',
-      text_title: 'Practica implementando los pipes disponibles en Angular',
-      text:`Implementacion y uso de todos los pipes contenidos en angular asi como prime ng para el desarrollo de la interfaz`,
-      link:'../../../assets/pipes/index.html'
+      title: 'Punto de Venta',
+      img: '../../../assets/puntoVenta.png',
+      text_title: 'Consumo de una api en node',
+      text:`Se creo una api en node con express con las operaciones crud para su consumo en angular`,
+      link:'../../../assets/productos/index.html'
 
     }, 
   ]
