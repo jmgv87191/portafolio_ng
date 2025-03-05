@@ -17,7 +17,7 @@ a{
 
 .proyecto{
     position: relative;
-    width: 15rem;
+    max-width: 15rem;
     border: 1px solid black;
     height: 27rem;
     border-radius: 5px;
@@ -110,6 +110,7 @@ a{
     text-align: center;
     font-size: 30px;
     font-weight: bolder;
+    line-height: 40px;
 }
 
 .proyect_button{
