@@ -1,0 +1,118 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: relative;
+}
+
+.navbar {
+    position: absolute;  
+    top: 0;             
+    left: 0;             
+    width: 100%;         
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px;
+    z-index: 10;       
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    position: relative;
+    color: black;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Las líneas que animan desde los lados */
+.nav-links li a::before,
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: black;
+    transition: all 0.4s ease;
+}
+
+.nav-links li a::before {
+    left: -50%;
+    transform: translateX(80%);
+}
+
+.nav-links li a::after {
+    right: -50%;
+    transform: translateX(-80%);
+}
+
+.nav-links li a:hover::before,
+.nav-links li a:hover::after {
+    width: 60%;
+}
+
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+.contenido_header {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 0, 0);
+    position: relative; 
+    top: 0;
+    z-index: 1; 
+    display: flex;
+}
+
+.contenedor1{
+    width: 30%;
+    height: 100%;
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor2{
+    width: 70%;
+    height: 100%;
+    background-color: rgb(139, 158, 214);
+}
+
